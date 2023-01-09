@@ -48,7 +48,19 @@
       console.log(`${value} / ${index} / ${thisArray}`);
     });
 
-    console.log(array1.filter((item) => item == "apple"));
+    console.log(array1.filter((item, index, array) => item == "apple"));
     console.log(array1.map((item) => `${item} 입니다`));
+
+    function check(item) {
+      return item == "apple";
+    }
+
+    const array2 = ["apple", "banana", "tomato"];
+
+    const check1 = (item) => item.includes("a");
+
+    const result = array2.filter(check1);
+
+    console.log(`체크${result}`);
   </script>
 </html>
